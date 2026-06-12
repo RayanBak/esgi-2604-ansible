@@ -1,7 +1,10 @@
 services:
   manager:
-    build: .
+    image: docker:29-dind
     privileged: true
+    ports:
+      - "80:80"
+
   node:
-    build: .
+    image: docker:29-dind
     privileged: true
